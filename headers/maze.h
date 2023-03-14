@@ -38,8 +38,10 @@ void input(int *maze);
 bool quit(void);
 
 void raycaster(int *maze, bool textured);
-void renderWalls(int *maze, SDL_Point map, point_t rayPos, point_t rayDir, double distToWall, int x, int side, bool textured);
+void renderWalls(int *maze, SDL_Point map, point_t rayPos, point_t rayDir,
+		double distToWall, int x, int side, bool textured);
 void renderBGFlat(void);
-void renderBGTex(SDL_Point map, point_t rayDir, double distToWall, double wallX, int drawEnd, int x, int side);
+void renderBGTex(SDL_Point map, point_t rayDir, double distToWall,
+		double wallX, int drawEnd, int x, int side);
 
 #endif /* MAZE_H */
