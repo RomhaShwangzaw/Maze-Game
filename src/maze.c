@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 	{
 		if (strcmp(argv[1], "no_tex") == 0)
 		{
-			mapName = "maps/map_0"
+			mapName = "maps/map_0";
 			textured = false;
 		}
 		else
