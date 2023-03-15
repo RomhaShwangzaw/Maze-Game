@@ -13,21 +13,21 @@ void loadTextures(char *mapName)
 
 	if (strcmp(mapName, "maps/map_0") == 0)
 	{
-		texSrc[0] = IMG_LOAD("textures/wall1.png");
-		texSrc[1] = IMG_LOAD("textures/wall2.png");
-		texSrc[2] = IMG_LOAD("textures/windowtree.png");
-		texSrc[3] = IMG_LOAD("textures/windowspooky.png");
-		texSrc[4] = IMG_LOAD("textures/ceiling.png");
-		texSrc[5] = IMG_LOAD("textures/floorboards.png");
+		texSrc[0] = IMG_Load("textures/wall1.png");
+		texSrc[1] = IMG_Load("textures/wall2.png");
+		texSrc[2] = IMG_Load("textures/windowtree.png");
+		texSrc[3] = IMG_Load("textures/windowspooky.png");
+		texSrc[4] = IMG_Load("textures/ceiling.png");
+		texSrc[5] = IMG_Load("textures/floorboards.png");
 	}
 	else
 	{
-		texSrc[0] = IMG_LOAD("textures/hedge1.png");
-		texSrc[1] = IMG_LOAD("textures/hedge2.png");
-		texSrc[2] = IMG_LOAD("textures/gate.png");
-		texSrc[3] = IMG_LOAD("textures/hedge1.png");
-		texSrc[4] = IMG_LOAD("textures/sky.png");
-		texSrc[5] = IMG_LOAD("textures/grass.png");
+		texSrc[0] = IMG_Load("textures/hedge1.png");
+		texSrc[1] = IMG_Load("textures/hedge2.png");
+		texSrc[2] = IMG_Load("textures/gate.png");
+		texSrc[3] = IMG_Load("textures/hedge1.png");
+		texSrc[4] = IMG_Load("textures/sky.png");
+		texSrc[5] = IMG_Load("textures/grass.png");
 	}
 
 	/* get colors from texture pixels and put in array */
