@@ -83,7 +83,7 @@ void input(int *maze)
 	if (keystate[SDL_SCANCODE_A])
 	{
 		/* rotate camera direction */
-		oldDirx = dir.x;
+		oldDirX = dir.x;
 		dir.x = dir.x * cos(-rotSpeed) - dir.y * sin(-rotSpeed);
 		dir.y = oldDirX * sin(-rotSpeed) + dir.y * cos(-rotSpeed);
 
@@ -109,7 +109,7 @@ bool quit(void)
 	{
 		/* if window's close button is pressed */
 		if (event.type == SDL_QUIT)
-			quit - true;
+			quit = true;
 
 		/* if ESC is pressed */
 		if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
@@ -120,9 +120,9 @@ bool quit(void)
 		{
 			windowFlags = SDL_GetWindowFlags(window);
 			if (windowFlags & SDL_WINDOW_FULLSCREEN)
-				SDL_SetWindowFullScreen(window, SDL_FALSE);
+				SDL_SetWindowFullscreen(window, SDL_FALSE);
 			else
-				SDL_SetWindowFullScreen(window, SDL_WINDOW_FULLSCREEN);
+				SDL_SetWindowFullscreen(window, SDL_WINDOW_FULLSCREEN);
 		}
 	}
 
