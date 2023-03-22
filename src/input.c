@@ -22,7 +22,7 @@ void input(int *maze)
 	rotSpeed = frameTime * 3.0;
 
 	/* move forward if no wall in front */
-	if (keystate[SDL_SCANCODE_W])
+	if (keystate[SDL_SCANCODE_W] || keystate[SDL_SCANCODE_UP])
 	{
 		if (!*((int *)maze + (int)(pos.x + dir.x * moveSpeed)
 					* MAP_WIDTH + (int)pos.y))
@@ -33,7 +33,7 @@ void input(int *maze)
 	}
 
 	/* move backward if no wall behind */
-	if (keystate[SDL_SCANCODE_S])
+	if (keystate[SDL_SCANCODE_S] || keystate[SDL_SCANCODE_DOWN])
 	{
 		if (!*((int *)maze + (int)(pos.x - dir.x * moveSpeed)
 					* MAP_WIDTH + (int)pos.y))
@@ -66,7 +66,7 @@ void input(int *maze)
 	}
 
 	/* rotate left */
-	if (keystate[SDL_SCANCODE_D])
+	if (keystate[SDL_SCANCODE_D] || keystate[SDL_SCANCODE_RIGHT])
 	{
 		/* rotate camera direction */
 		oldDirX = dir.x;
@@ -80,7 +80,7 @@ void input(int *maze)
 	}
 
 	/* rotate right */
-	if (keystate[SDL_SCANCODE_A])
+	if (keystate[SDL_SCANCODE_A] || keystate[SDL_SCANCODE_LEFT])
 	{
 		/* rotate camera direction */
 		oldDirX = dir.x;
